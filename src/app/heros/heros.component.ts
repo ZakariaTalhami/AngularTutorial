@@ -17,10 +17,6 @@ export class HerosComponent implements OnInit {
     this.getHeros();
   }
 
-  onSelect(hero) {
-    this.selectedHero = (this.selectedHero !== hero) ? hero : undefined;
-  }
-
   getHeros() {
     this.heroService.getHeros().subscribe(heros => this.heros = heros);
   }
